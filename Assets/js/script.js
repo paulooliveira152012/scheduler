@@ -11,11 +11,18 @@ $(document).ready(function () {
 
   // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+//Add event listener to parent container
+$(".container").on("click"), function() {
+    window.alert("Hey")
+}
+
+
+
 //wait for button click to save values to local storage
-$(".saveBtn").on("click", function () {
-    var text = $(this);
-    console.log(text);
-  });
+// $(".saveBtn").on("click", function () {
+//     var text = $(this);
+//     console.log(text);
+//   });
 
 });
 
