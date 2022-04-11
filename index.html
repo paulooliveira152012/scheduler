@@ -31,62 +31,84 @@
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
+      <p id="twoDaysAhead"></p>
     </header>
     <main>
-      <div class="container">
+       <div class="container-fluid">  <!-- -fluid will make it go full screen -->
         <!-- Timeblocks go here -->
 
-        <!-- in each row I have two columns -->
-        <div class="row bg-info">
-          <!-- the col is using 2/12 of the ful width -->
-          <div class="col-2 bg-warning ">9:00am</div>
-          <!-- the other col is using the rest to complete 12/12 -->
-          <div class="col">Check and clean up e-mail</div>
+        <div id="hour-8" class="row time-blocks timeBlock">
+            <div class="col-1 hour">
+              8am
+            </div>
+            <textarea class="col-10 appointment"></textarea>
+            <button class="col-1 saveBtn">Save</button>
         </div>
 
-        
-        <div class="row bg-info">
-          <div class="col-2 bg-warning">10:00am</div>
-          <div class="col">Check and clean up e-mail</div>
+        <div id="hour-9" class="row time-blocks timeBlock">
+          <div class="col-1 hour">
+            9am
+          </div>
+          <textarea class="col-10 appointment"></textarea>
+          <button class="col-1 saveBtn">Save</button>
+      </div>
+
+        <div id="hour-10" class="row Time-blocks">
+          <div class="col-1 hour">
+            10am
+          </div>
+          <textarea class="col-10 appointment"></textarea>
+          <button class="col-1 saveBtn">Save</button>
         </div>
 
-        <div class="row bg-info">
-          <div class="col-2 bg-warning ">11:00am</div>
-          <div class="col">Check and clean up e-mail</div>
+        <div id="hour-11" class="row Time-blocks">
+          <div class="col-1 hour">
+            11am
+          </div>
+          <textarea class="col-10 appointment"></textarea>
+          <button class="col-1 saveBtn">Save</button>
         </div>
 
-        <div class="row bg-info">
-          <div class="col-2 bg-warning">12:00pm</div>
-          <div class="col">Check and clean up e-mail</div>
+        <div id="hour-12" class="row Time-blocks">
+          <div class="col-1 hour">
+            12am
+          </div>
+          <textarea class="col-10 appointment"></textarea>
+          <button class="col-1 saveBtn">Save</button>
         </div>
 
-        <div class="row bg-info">
-          <div class="col-2 bg-warning">1:00apm</div>
-          <div class="col">Check and clean up e-mail</div>
+        <div id="hour-13" class="row Time-blocks">
+          <div class="col-1 hour">
+            13am
+          </div>
+          <textarea class="col-10 appointment"></textarea>
+          <button class="col-1 saveBtn">Save</button>
         </div>
 
-        <div class="row bg-info">
-          <div class="col-2 bg-warning">2:00pm</div>
-          <div class="col">Check and clean up e-mail</div>
+        <div id="hour-14" class="row Time-blocks">
+          <div class="col-1 hour">
+            14am
+          </div>
+          <textarea class="col-10 appointment"></textarea>
+          <button class="col-1 saveBtn">Save</button>
         </div>
 
-        <div class="row bg-info">
-          <div class="col-2 bg-warning">3:00pm</div>
-          <div class="col">Check and clean up e-mail</div>
+        <div id="hour-15" class="row Time-blocks">
+          <div class="col-1 hour">
+            15am
+          </div>
+          <textarea class="col-10 appointment"></textarea>
+          <button class="col-1 saveBtn">Save</button>
         </div>
 
-        <div class="row bg-info">
-          <div class="col-2 bg-warning">4:00pm</div>
-          <div class="col">Check and clean up e-mail</div>
+        <div id="hour-16" class="row Time-blocks">
+          <div class="col-1 hour">
+            16am
+          </div>
+          <textarea class="col-10 appointment"></textarea>
+          <button class="col-1 saveBtn">Save</button>
         </div>
 
-        <div class="row bg-info">
-          <div class="col-2 bg-warning">5:00pm</div>
-          <div class="col">Check and clean up e-mail</div>
-        </div>
-
-        
-        
       </div>
     </main>
 
