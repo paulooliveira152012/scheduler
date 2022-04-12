@@ -1,34 +1,29 @@
-// document.body.style.backgroundColor = "red";
-// document.body.style.backgroundColor= "blue";
-//special moment object that represents current time nd date
-var currentTime = moment().format("hh:mm:ss a");
-console.log(currentTime)
-
 //first thing is to wrapp document in a ready method
 $(document).ready(function () {
-                          // Displaying current date and time
+  // Displaying current date and time
 
-  //creating new variable for current day
-    var rightNow = document.querySelector("#currentDay");
-  
-  //seting the text content for current date and time
-    rightNow.textContent = moment().format()("MMM DD, YYY - hh:mm:ss a");
+//creating new variable for current day
+var rightNow = document.querySelector("#currentDay");
+//special moment object that represents current time nd date
+var currentTime = moment();
+//seting the text content for current date and time
+rightNow.textContent = currentTime.format("MMM DD, YYYY - hh:mm:ss a");
 
-  // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^end of getting to show time
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^end of getting to show time
 
-                        // (SETTING VALUES TO LOCAL STORAGE)
+// (SETTING VALUES TO LOCAL STORAGE)
 
-  //   var hour = document.getElementById();
-  //wait for button click to save values to local storage
-  $(".saveBtn").on("click", function () {
-    var value = $(this).siblings(".appointment").val();
-    var time = $(this).parent().attr("id");
-    //loacl storage takes two parameters => key and value
-    localStorage.setItem(time, value);
-  });
+//   var hour = document.getElementById();
+//wait for button click to save values to local storage
+$(".saveBtn").on("click", function () {
+var value = $(this).siblings(".appointment").val();
+var time = $(this).parent().attr("id");
+//loacl storage takes two parameters => key and value
+localStorage.setItem(time, value);
+});
 });
 
-                          // (GETTING VALUES FROM LOCAL STORAGE)
+  // (GETTING VALUES FROM LOCAL STORAGE)
 $('#hour-8 .appointment').val(localStorage.getItem('hour-8')); 
 $('#hour-9 .appointment').val(localStorage.getItem('hour-9')); 
 $('#hour-10 .appointment').val(localStorage.getItem('hour-10')); 
@@ -48,31 +43,22 @@ var row = document.getElementsByClassName(".row");
 
 
 function changeColor() {
-  $(".appointment").removeClassList(".past, current, present")
-  if (currentTime) {
-    row.addClassList(".present")
-  } else if (row < currentTime) {
-    row.addClassList(".past")
-  } else (row > currentTime) 
-    row.addClassList("future")
-  }
-
-// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^end of getting changing color
-
-
-
-
-function color() {
-  if (currentTime = moment()) {
-    row.addClassList("present")
-  }
+$(".appointment").removeClassList(".past, current, present")
+if (currentTime) {
+row.addClassList(".present")
+} else if (row < currentTime) {
+row.addClassList(".past")
+} else (row > currentTime) 
+row.addClassList("future")
 }
 
 
-// var time8 = document.querySelectorAll(".hour");
-// console.log(time8[2].textContent.trim().charAt(0))
-// console.log(time8)
 
 
 
 
+// function color() {
+//   if (currentTime = moment()) {
+//     row.addClassList("present")
+//   }
+// }
