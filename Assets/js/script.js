@@ -1,13 +1,18 @@
+// document.body.style.backgroundColor = "red";
+// document.body.style.backgroundColor= "blue";
+//special moment object that represents current time nd date
+var currentTime = moment().format("hh:mm:ss a");
+console.log(currentTime)
+
 //first thing is to wrapp document in a ready method
 $(document).ready(function () {
                           // Displaying current date and time
 
   //creating new variable for current day
     var rightNow = document.querySelector("#currentDay");
-  //special moment object that represents current time nd date
-    var currentTime = moment();
+  
   //seting the text content for current date and time
-    rightNow.textContent = currentTime.format("MMM DD, YYYY - hh:mm:ss a");
+    rightNow.textContent = moment().format()("MMM DD, YYY - hh:mm:ss a");
 
   // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^end of getting to show time
 
@@ -52,13 +57,22 @@ function changeColor() {
     row.addClassList("future")
   }
 
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^end of getting changing color
 
 
 
 
+function color() {
+  if (currentTime = moment()) {
+    row.addClassList("present")
+  }
+}
 
-// function color() {
-//   if (currentTime = moment()) {
-//     row.addClassList("present")
-//   }
-// }
+
+// var time8 = document.querySelectorAll(".hour");
+// console.log(time8[2].textContent.trim().charAt(0))
+// console.log(time8)
+
+
+
+
