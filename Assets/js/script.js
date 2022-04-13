@@ -35,30 +35,3 @@ $('#hour-15 .appointment').val(localStorage.getItem('hour-15'));
 $('#hour-16 .appointment').val(localStorage.getItem('hour-16')); 
 
 // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^end of getting values from lcal storage
-
-//function to change row colors based on past, present and future time
-
-//create variable to select the row
-var row = document.getElementsByClassName(".row"); 
-
-
-function changeColor() {
-$(".appointment").removeClassList(".past, current, present")
-if (currentTime) {
-row.addClassList(".present")
-} else if (row < currentTime) {
-row.addClassList(".past")
-} else (row > currentTime) 
-row.addClassList("future")
-}
-
-
-
-
-
-
-// function color() {
-//   if (currentTime = moment()) {
-//     row.addClassList("present")
-//   }
-// }
