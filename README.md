@@ -27,14 +27,12 @@ Welcome to the Scheduler web application. This application has as it's core purp
 
 
 
-HTML Screen-shot
-![HTML ScreenShot](assets/ScreenShot/html.png)
+JavaScript Screen-shot
+![JS ScreenShot](./Assets/screenshot/Js.png)
 
-CSS Screen-shot
-![CSS ScreenShot](assets/ScreenShot/css.png)
 
 Website Screen-shot
-![WebsiteScreenshot](assets/ScreenShot/Website.png)
+![WebsiteScreenshot](./Assets/screenshot/website.png)
 
 
 
