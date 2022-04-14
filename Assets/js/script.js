@@ -21,44 +21,38 @@ var time = $(this).parent().attr("id");
 //loacl storage takes two parameters => key and value
 localStorage.setItem(time, value);
 });
-});
+
 
   // (GETTING VALUES FROM LOCAL STORAGE)
-$('#hour-8 .appointment').val(localStorage.getItem('hour-8')); 
-$('#hour-9 .appointment').val(localStorage.getItem('hour-9')); 
-$('#hour-10 .appointment').val(localStorage.getItem('hour-10')); 
-$('#hour-11 .appointment').val(localStorage.getItem('hour-11')); 
-$('#hour-12 .appointment').val(localStorage.getItem('hour-12')); 
-$('#hour-13 .appointment').val(localStorage.getItem('hour-13')); 
-$('#hour-14 .appointment').val(localStorage.getItem('hour-14')); 
-$('#hour-15 .appointment').val(localStorage.getItem('hour-15')); 
-$('#hour-16 .appointment').val(localStorage.getItem('hour-16')); 
+function myTasks () {
+  for (var i = 0; i < localStorage.length; i++) {
+    var localStorageKey = localStorage.key(i)
+    console.log(localStorageKey)
+    $('#' + localStorageKey + " .appointment").val(localStorage.getItem(localStorageKey))
+  } 
+}
+
+myTasks()
 
 // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^end of getting values from lcal storage
 
 //function to change row colors based on past, present and future time
 
-//create variable to select the row
-var row = document.getElementsByClassName(".row"); 
+//get all elemtns .time-block // each => loop
+$('.appointment').each(function() {
+  // $(this).removeClass( "past present future" )
+  //check time based on the id
+  var currentTimeBlock = $(this).parent().attr("id").split("-")[1];
+  console.log(currentTimeBlock)
+  //get current time
+  var currentHour = moment().hour();
 
-
-function changeColor() {
-$(".appointment").removeClassList(".past, current, present")
-if (currentTime) {
-row.addClassList(".present")
-} else if (row < currentTime) {
-row.addClassList(".past")
-} else (row > currentTime) 
-row.addClassList("future")
-}
-
-
-
-
-
-
-// function color() {
-//   if (currentTime = moment()) {
-//     row.addClassList("present")
-//   }
-// }
+  if (currentHour === parseInt(currentTimeBlock)) {
+    $(this).addClass("present")
+    } else if (parseInt(currentTimeBlock) < currentHour) {
+    $(this).addClass("past")
+    } else {
+    $(this).addClass("future")
+    };
+});
+});
